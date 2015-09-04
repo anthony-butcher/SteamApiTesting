@@ -1,7 +1,8 @@
 ﻿namespace Steam.UnitTests
 {
     using NUnit.Framework;
-    using Steam.Models;
+    using Steam.Data.Api;
+    using Steam.DI;
 
     [TestFixture]
     public class Tests
@@ -9,29 +10,9 @@
         [Test]
         public void Test1()
         {
-            var webClient = new WebClient();
+            var repositories = Container.Resolve<IPlayerRepository>();
 
-            var result = webClient.QueryApi(
-                ApiInterfaces.SteamUserStats,
-                ApiMethods.GetUserStatsForGame,
-                Enums.CsGo,
-                "76561197969877387");
-
-            var deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<Steam.Models.PlayerStatsResponse>(result);
-        }
-
-        [Test]
-        public void Test2()
-        {
-            var webClient = new WebClient();
-
-            var result = webClient.QueryApi(
-                ApiInterfaces.SteamUser,
-                ApiMethods.GetPlayerSummaries,
-                Enums.CsGo,
-                "76561197969877387");
-
-            var deserialized = Newtonsoft.Json.JsonConvert.DeserializeObject<Steam.Models.PlayerStatsResponse>(result);
+            var result = repositories.Get(Constants.SteamIds.Mine);
         }
     }
 }

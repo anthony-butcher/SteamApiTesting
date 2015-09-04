@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77A6FBDD-5A96-42CF-B391-F59D35E10731}</ProjectGuid>
+    <ProjectGuid>{19F231AB-D888-4B21-99D5-E528626C6510}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Steam.UnitTests</RootNamespace>
-    <AssemblyName>Steam.UnitTests</AssemblyName>
+    <RootNamespace>Steam.DI</RootNamespace>
+    <AssemblyName>Steam.DI</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Microsoft.Practices.Unity, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Unity.3.5.1404.0\lib\net45\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -43,26 +51,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
+    <Compile Include="Container.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Steam.Data.Api\Steam.Data.Api.csproj">
-      <Project>{FC8A5483-2B2E-4C9C-9956-07DC29FACA79}</Project>
-      <Name>Steam.Data.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Steam.DI\Steam.DI.csproj">
-      <Project>{19f231ab-d888-4b21-99d5-e528626c6510}</Project>
-      <Name>Steam.DI</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Steam.Models\Steam.Models.csproj">
-      <Project>{c3f03683-8613-45ee-b5fc-7e85163fca11}</Project>
-      <Name>Steam.Models</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Steam\Steam.csproj">
-      <Project>{9eab4d6f-76e1-41e7-b190-381b5acd356f}</Project>
-      <Name>Steam</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

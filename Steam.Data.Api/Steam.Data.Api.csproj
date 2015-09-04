@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{77A6FBDD-5A96-42CF-B391-F59D35E10731}</ProjectGuid>
+    <ProjectGuid>{FC8A5483-2B2E-4C9C-9956-07DC29FACA79}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Steam.UnitTests</RootNamespace>
-    <AssemblyName>Steam.UnitTests</AssemblyName>
+    <RootNamespace>Steam.Data.Api</RootNamespace>
+    <AssemblyName>Steam.Data.Api</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,8 +30,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=7.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System" />
@@ -43,24 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Tests.cs" />
+    <Compile Include="IPlayerRepository.cs" />
+    <Compile Include="PlayerRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="IWebClient.cs" />
+    <Compile Include="WebClient.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Steam.Data.Api\Steam.Data.Api.csproj">
-      <Project>{FC8A5483-2B2E-4C9C-9956-07DC29FACA79}</Project>
-      <Name>Steam.Data.Api</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Steam.DI\Steam.DI.csproj">
-      <Project>{19f231ab-d888-4b21-99d5-e528626c6510}</Project>
-      <Name>Steam.DI</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Steam.Models\Steam.Models.csproj">
       <Project>{c3f03683-8613-45ee-b5fc-7e85163fca11}</Project>
       <Name>Steam.Models</Name>
     </ProjectReference>
     <ProjectReference Include="..\Steam\Steam.csproj">
-      <Project>{9eab4d6f-76e1-41e7-b190-381b5acd356f}</Project>
+      <Project>{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}</Project>
       <Name>Steam</Name>
     </ProjectReference>
   </ItemGroup>

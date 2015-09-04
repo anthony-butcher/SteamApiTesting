@@ -1,0 +1,5 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=250187E5207B449F80D1D69F1539D36B/@KeyIndexDefined">True</s:Boolean>
+	<s:Int64 x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=250187E5207B449F80D1D69F1539D36B/GroupingIndex/@EntryValue">4</s:Int64>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=250187E5207B449F80D1D69F1539D36B/Name/@EntryValue">Test1</s:String>
+	<s:String x:Key="/Default/Housekeeping/UnitTestingMru/UnitTestSessionPersistentData/=250187E5207B449F80D1D69F1539D36B/XmlSerializedElements/@EntryValue">&lt;Session&gt;&lt;e Id="Steam.UnitTests.Tests.Test1" Project="77A6FBDD-5A96-42CF-B391-F59D35E10731" Provider="nUnit" /&gt;&lt;e Id="Steam.UnitTests.Tests" Project="77A6FBDD-5A96-42CF-B391-F59D35E10731" Provider="nUnit" /&gt;&lt;/Session&gt;</s:String></wpf:ResourceDictionary>

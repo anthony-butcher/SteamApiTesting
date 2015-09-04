@@ -42,7 +42,6 @@
     <Compile Include="Constants.cs" />
     <Compile Include="EnumAdapters.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="WebClient.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Steam.Models\Steam.Models.csproj">
