@@ -1,0 +1,4 @@
+packages/
+*/bin/Debug/*
+*/obj/Debug/*
+Steam.sln.ide/

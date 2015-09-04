@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam", "Steam\Steam.csproj", "{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam.UnitTests", "Steam.UnitTests\Steam.UnitTests.csproj", "{77A6FBDD-5A96-42CF-B391-F59D35E10731}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Steam.Models", "Steam.Models\Steam.Models.csproj", "{C3F03683-8613-45EE-B5FC-7E85163FCA11}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EAB4D6F-76E1-41E7-B190-381B5ACD356F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77A6FBDD-5A96-42CF-B391-F59D35E10731}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A6FBDD-5A96-42CF-B391-F59D35E10731}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A6FBDD-5A96-42CF-B391-F59D35E10731}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A6FBDD-5A96-42CF-B391-F59D35E10731}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3F03683-8613-45EE-B5FC-7E85163FCA11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3F03683-8613-45EE-B5FC-7E85163FCA11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3F03683-8613-45EE-B5FC-7E85163FCA11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3F03683-8613-45EE-B5FC-7E85163FCA11}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
