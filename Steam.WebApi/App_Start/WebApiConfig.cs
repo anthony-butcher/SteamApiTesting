@@ -8,6 +8,8 @@ using Newtonsoft.Json.Serialization;
 
 namespace Steam.WebApi
 {
+    using System.Net.Http.Headers;
+
     public static class WebApiConfig
     {
         public static void Register(HttpConfiguration config)
@@ -19,6 +21,8 @@ namespace Steam.WebApi
 
             // Web API routes
             config.MapHttpAttributeRoutes();
+
+            config.Formatters.JsonFormatter.SupportedMediaTypes.Add(new MediaTypeHeaderValue("text/html"));
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
