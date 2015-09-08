@@ -3,7 +3,7 @@
     using System.Diagnostics;
     using Newtonsoft.Json;
 
-    [DebuggerDisplay("{name} - {value}")]
+    [DebuggerDisplay("{Name} - {Value}")]
     public class Stat
     {
         [JsonProperty(PropertyName = "name")]

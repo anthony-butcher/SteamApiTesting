@@ -12,7 +12,7 @@
         public string SteamId { get; set; }
 
         [JsonProperty(PropertyName = "communityvisibilitystate")]
-        public CommunityVisibilityState CommunityVisibilityState { get; set; }
+        public Enums.CommunityVisibilityState CommunityVisibilityState { get; set; }
 
         [JsonProperty(PropertyName = "profilestate")]
         public int ProfileState { get; set; }
@@ -33,7 +33,7 @@
         public string AvatarFull { get; set; }
 
         [JsonProperty(PropertyName = "personastate")]
-        public PersonaStates PersonaState { get; set; }
+        public Enums.PersonaStates PersonaState { get; set; }
 
         [JsonProperty(PropertyName = "primaryclanid")]
         public string PrimaryClanId { get; set; }
