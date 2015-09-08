@@ -12,9 +12,11 @@ var data = {
     weapons: ['ak47','m4a1','awp','hkp2000','p250','deagle','p90','fiveseven','glock','negev','famas','ssg08','tec9','galilar','bizon','aug','sawedoff','hegrenade','elite','mp7','mag7','ump45','nova','xm1014','knife','sg556','mp9','mac10','m249','scar20','g3sg1','molotov','taser']
 };
 
-var steamApp = angular.module('steamApp', ['ngRoute']);
+var steamApp = angular.module('steamApp', ['ngRoute', 'angular-loading-bar']);
 
-steamApp.config(['$routeProvider', function($routeProvider) {
+steamApp.config(['$routeProvider', 'cfpLoadingBarProvider', function($routeProvider, cfpLoadingBarProvider) {
+    cfpLoadingBarProvider.includeSpinner = false;
+
     $routeProvider
         .when('/player', {
             templateUrl: 'partials/player.html',
@@ -34,8 +36,8 @@ steamApp.config(['$routeProvider', function($routeProvider) {
 }]);
 
 steamApp.controller('PlayerController',
-    ['$scope', '$http', '$routeParams', 'playerService',
-    function ($scope, $http, $routeParams, playerService) {
+    ['$scope', '$routeParams', 'playerService',
+    function ($scope, $routeParams, playerService) {
 
         $scope.submitHandler = function(steamId) {
             location.href = '/#/player/' + steamId;
