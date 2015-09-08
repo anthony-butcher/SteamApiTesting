@@ -3,3 +3,4 @@ packages/
 */obj/Debug/*
 Steam.sln.ide/
 Steam.WebApi/bin/*
+Steam.WebApi/bower_components/*

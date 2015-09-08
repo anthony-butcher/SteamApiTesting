@@ -1,0 +1,9 @@
+{
+  "name": "Steam.WebApi",
+  "version": "0.0.0",
+  "authors": [
+    "anthony-butcher <anthony.b@mmtdigital.co.uk>"
+  ],
+  "license": "MIT",
+  "private": true
+}
