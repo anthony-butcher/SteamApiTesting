@@ -2,9 +2,11 @@
 {
     using System;
     using System.Web.Http;
+    using System.Web.Http.Cors;
     using Steam.Data.Api;
     using Steam.Models;
 
+    [EnableCors("*", "*", "*")]
     public class PlayerController : ApiController
     {
         private readonly IPlayerRepository _playerRepository;
