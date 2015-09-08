@@ -5,5 +5,8 @@
     "anthony-butcher <anthony.b@mmtdigital.co.uk>"
   ],
   "license": "MIT",
-  "private": true
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.5"
+  }
 }
