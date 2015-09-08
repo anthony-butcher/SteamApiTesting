@@ -4,3 +4,6 @@ packages/
 Steam.sln.ide/
 Steam.WebApi/bin/*
 Steam.WebApi/bower_components/*
+Steam.App/bower_components/
+Steam.App/node_modules/connect/index.js
+Steam.App/node_modules/
