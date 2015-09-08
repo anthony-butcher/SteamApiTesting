@@ -10,9 +10,9 @@
         [Test]
         public void Test1()
         {
-            var repositories = Container.Resolve<IPlayerRepository>();
+            var playerRepository = Container.Resolve<IPlayerRepository>();
 
-            var result = repositories.Get(Constants.SteamIds.Mine);
+            var result = playerRepository.Get(Constants.SteamIds.Mine);
         }
     }
 }
