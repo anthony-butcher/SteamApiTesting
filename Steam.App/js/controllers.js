@@ -33,53 +33,44 @@ steamApp.config(['$routeProvider', function($routeProvider) {
         });
 }]);
 
-steamApp.controller('PlayerController', function ($scope, $http, $routeParams) {
-    var service = {
-        getCsgoStats: function(steamId, callback) {
-            $http
-                .get('http://localhost:55129/api/PlayerStats/' + steamId + '/730')
-                .success(function(data) {
-                    callback(data)
-                });
+steamApp.controller('PlayerController',
+    ['$scope', '$http', '$routeParams', 'playerService',
+    function ($scope, $http, $routeParams, playerService) {
+
+        $scope.submitHandler = function(steamId) {
+            location.href = '/#/player/' + steamId;
+        };
+
+        $scope.getStats = function(steamId) {
+            playerService.getCsgoStats(steamId, function(data) {
+                $scope.playerStats = data;
+            });
+        };
+
+        $scope.getOrder = function() {
+            return $scope.statOrder + $scope.statOrderProperty;
+        };
+
+        $scope.getFilter = function() {
+            var separator = ($scope.statFilter.length !== 0 && $scope.statWeaponFilter.length !== 0) ? '_' : '',
+                filter = $scope.statFilter + separator + $scope.statWeaponFilter;
+
+            return filter;
         }
-    };
 
-    $scope.submitHandler = function(steamId) {
-        location.href = '/#/player/' + steamId;
-    };
+        $scope.weapons = data.weapons;
+        $scope.statFilter = '';
+        $scope.statWeaponFilter = '';
+        $scope.statOrderProperty = 'name';
+        $scope.statOrder = '';
 
-    $scope.getStats = function(steamId) {
-        service.getCsgoStats(steamId, function(data) {
-            $scope.playerStats = data;
-        });
-    };
-
-    $scope.getOrder = function() {
-        return $scope.statOrder + $scope.statOrderProperty;
-    };
-
-    $scope.getFilter = function() {
-        var separator = ($scope.statFilter.length !== 0 && $scope.statWeaponFilter.length !== 0) ? ' ' : '',
-            filter = $scope.statFilter + separator + $scope.statWeaponFilter;
-
-        return filter;
-    }
-
-    $scope.weapons = data.weapons;
-    $scope.statFilter = '';
-    $scope.statWeaponFilter = '';
-    $scope.statOrderProperty = 'name';
-    $scope.statOrder = '';
-
-    if($routeParams.steamId) {
-        $scope.steamId = $routeParams.steamId;
-        $scope.getStats($routeParams.steamId);
-    }
-});
-
+        if($routeParams.steamId) {
+            $scope.steamId = $routeParams.steamId;
+            $scope.getStats($routeParams.steamId);
+        }
+    }]
+);
 
 steamApp.controller('AnotherController', function($scope) {
-
     console.log('AnotherController');
-
 });
