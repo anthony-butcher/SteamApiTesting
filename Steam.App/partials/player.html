@@ -5,22 +5,27 @@
 
 <br /><br />
 
-<h4>{{playerStats.steamID}}</h4>
-<input ng-model="statFilter" />
-<select ng-model="statWeaponFilter">
-	<option selected value="">Select a weapon</option>
-	<option ng-repeat="weap in weapons | orderBy:weap" value="{{weap}}">{{weap}}</option>
-</select>
-<select ng-model="statOrderProperty">
-	<option value="name" selected>name</option>
-	<option value="value">value</option>
-</select>
-<select ng-model="statOrder">
-	<option value="">asc</option>
-	<option value="-">desc</option>
-</select>
-<ul>
-    <li ng-repeat="stat in playerStats.stats | filter:getFilter() | orderBy:getOrder()">
-        <span>{{stat.name}}</span> - <span>{{stat.value}}</span>
-    </li>
-</ul>
+<div class="profile">
+	<h3><img ng-src="{{playerProfile.avatar}}" />{{playerProfile.personaname}}</h3>
+</div>
+
+<div class="stats">
+	<input ng-model="statFilter" />
+	<select ng-model="statWeaponFilter">
+		<option selected value="">Select a weapon</option>
+		<option ng-repeat="weap in weapons | orderBy:weap" value="{{weap}}">{{weap}}</option>
+	</select>
+	<select ng-model="statOrderProperty">
+		<option value="name" selected>name</option>
+		<option value="value">value</option>
+	</select>
+	<select ng-model="statOrder">
+		<option value="">asc</option>
+		<option value="-">desc</option>
+	</select>
+	<ul>
+	    <li ng-repeat="stat in playerStats.stats | filter:getFilter() | orderBy:getOrder()">
+	        <span>{{stat.name}}</span> - <span>{{stat.value}}</span>
+	    </li>
+	</ul>
+</div>

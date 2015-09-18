@@ -6,6 +6,14 @@ steamApp.factory('playerService', ['$http', function($http) {
                 .success(function(data) {
                     callback(data)
                 });
+        },
+
+        getPlayerProfile: function(steamId, callback) {
+        	$http
+        		.get('http://localhost:55129/api/Player/' + steamId)
+        		.success(function(data) {
+        			callback(data)
+        		});
         }
     };
 }]);

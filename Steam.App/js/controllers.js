@@ -49,6 +49,13 @@ steamApp.controller('PlayerController',
             });
         };
 
+        $scope.getProfile = function(steamId) {
+            playerService.getPlayerProfile(steamId, function(data) {
+                $scope.playerProfile = data;
+                console.log(data);
+            });
+        };
+
         $scope.getOrder = function() {
             return $scope.statOrder + $scope.statOrderProperty;
         };
@@ -69,6 +76,7 @@ steamApp.controller('PlayerController',
         if($routeParams.steamId) {
             $scope.steamId = $routeParams.steamId;
             $scope.getStats($routeParams.steamId);
+            $scope.getProfile($routeParams.steamId);
         }
     }]
 );
